@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	function pulaLinha(){
+		document.write("</br>");
+	}
+	alert("BEM VINDO AO JOGO DE ADIVINHAR O NÚMERO!")
+	var nome = prompt("Informe o seu nome:");
+	var numPC = Math.round(Math.random(10) * 10);
+	var i = 0;
+	var flag = false;
+	
+
+
+	alert(nome + " terá 3 chances para acertar o número!")
+
+	while (flag == false){
+
+		var numUsuario = prompt("Chance número " + (i+1) + "! " + nome + " tente adivinhar o número: ");
+		if (numUsuario == numPC){
+			alert(nome + " acertou o número! Era o número " + numPC);
+			flag = true;
+		} else{
+			if (i == 2){
+				alert(nome + " não conseguiu acertar o número. Era o " + numPC);
+				flag = true;
+			} else{
+
+
+			alert(nome + " errou!");
+			}
+		}
+		i++;
+	}
+</script>
